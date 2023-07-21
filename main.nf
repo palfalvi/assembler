@@ -60,7 +60,6 @@ include { wtdbg } from './modules/wtdbg.nf'
 include { scaffX } from './modules/scaff10x.nf'
 include { breakX } from './modules/break10x.nf'
 include { purge_dups } from './modules/purge_dups.nf'
-include { longranger } from './modules/longranger.nf'
 include { debarcodeX } from './modules/debarcode10x.nf'
 include { arima_mapping } from './modules/arima_mapping.nf'
 include { salsa } from './modules/salsa.nf'
@@ -212,6 +211,8 @@ log.info ">>> Starting Genome Assembler pipeline ... "
       //scaffX( assembly, linked_r )
       //breakX( scaffX.out.assembly, linked_r )
 
+      // Tigmint + ARCS
+
       assembly = breakX.out.assembly
   }
 
@@ -230,8 +231,8 @@ log.info ">>> Starting Genome Assembler pipeline ... "
           hic_r.subscribe {  println "HiC reads provided: $it"  }
           log.info ">>> Scaffolding primary assembly with Salsa."
 
-          arima_mapping( assembly, hic_r )
-          salsa( assembly, arima_mapping.out.bam, arima_mapping.out.baidx )
+          //arima_mapping( assembly, hic_r )
+          //salsa( assembly, arima_mapping.out.bam, arima_mapping.out.baidx )
           assembly = salsa.out.assembly
         }
 
