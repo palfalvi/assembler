@@ -10,7 +10,7 @@ process purge_dups {
   path base_cov
   path cutoffs
   path self_alignment
-  assembly
+  path assembly
 
   output:
     path '*_purged.fasta', emit: assembly

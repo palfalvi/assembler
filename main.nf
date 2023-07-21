@@ -188,7 +188,7 @@ log.info ">>> Starting Genome Assembler pipeline ... "
 
   if ( params.purge ) {
     log.info ">>> Purging haplotigs."
-    purge_dups_wf(assembly, params.fastq)
+    purge_dups_wf( assembly, params.fastq )
     assembly = purge_dups_wf.out.assembly
     // purge_duplicates https://depot.galaxyproject.org/singularity/purge_dups:1.2.5--h5bf99c6_1
   }
