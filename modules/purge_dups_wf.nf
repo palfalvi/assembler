@@ -6,8 +6,7 @@ include { purge_dups } from '../modules/purge_dups.nf'
 workflow vgp_polish_wf {
     take:
     assembly
-    path long_reads
-    val platform // map-ont (ONT) map-pb (PB CLR) or asm20 (HiFi)
+    long_reads
 
     main:
 
