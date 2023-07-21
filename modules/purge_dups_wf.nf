@@ -3,7 +3,7 @@ include { minimap2_genomes } from '../modules/minimap_genomes.nf'
 include { pd_cov } from '../modules/pd_cov.nf'
 include { purge_dups } from '../modules/purge_dups.nf'
 
-workflow vgp_polish_wf {
+workflow purge_dups_wf {
     take:
     assembly
     long_reads
