@@ -14,6 +14,6 @@ process minimap2_genomes {
 
   script:
     """
-    minimap2 -x asm5 -DP -t ${task.cpus} $genome $genome > ${genome1.simpleName}vs${genome2.simpleName}.paf
+    minimap2 -x asm5 -DP -t ${task.cpus} $genome $genome > ${genome.simpleName}vs${genome.simpleName}.paf
     """
 }
