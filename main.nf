@@ -60,6 +60,7 @@ include { wtdbg } from './modules/wtdbg.nf'
 include { scaffX } from './modules/scaff10x.nf'
 include { breakX } from './modules/break10x.nf'
 include { purge_dups } from './modules/purge_dups.nf'
+include { purge_dups_wf } from './modules/purge_dups_wf.nf'
 include { debarcodeX } from './modules/debarcode10x.nf'
 include { arima_mapping } from './modules/arima_mapping.nf'
 include { salsa } from './modules/salsa.nf'
@@ -187,8 +188,8 @@ log.info ">>> Starting Genome Assembler pipeline ... "
 
   if ( params.purge ) {
     log.info ">>> Purging haplotigs."
-    purge_dups(assembly, params.fastq, "map-ont")
-    assembly = purge_dups.out.purged
+    purge_dups_wf(assembly, params.fastq, "map-ont")
+    assembly = purge_dups_wf.out.assembly
     // purge_duplicates https://depot.galaxyproject.org/singularity/purge_dups:1.2.5--h5bf99c6_1
   }
 
