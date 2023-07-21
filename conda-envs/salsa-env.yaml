@@ -1,0 +1,9 @@
+name: salsa-env
+channels:
+    - conda-forge
+    - bioconda
+    - defaults
+dependencies:
+    - salsa2
+    - bedtools
+    - samtools

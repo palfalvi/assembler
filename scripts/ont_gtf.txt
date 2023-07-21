@@ -1,0 +1,2 @@
+stringtie2_long_taco_agat.gff3 lstr True 3
+Splicing_Isoforms_agat.gff3 unagi True 2

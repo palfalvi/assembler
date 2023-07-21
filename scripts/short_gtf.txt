@@ -1,0 +1,3 @@
+strawberry_short_taco_agat.gff3 stra True 2
+stringtie2_short_taco_agat.gff3 stri True 2
+star_trinity_agat.gff3 trin False 1

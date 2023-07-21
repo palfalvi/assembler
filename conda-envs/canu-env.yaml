@@ -1,0 +1,12 @@
+name: canu-env
+channels:
+    - conda-forge
+    - bioconda
+    - defaults
+dependencies:
+    - libgcc
+    - perl
+    - perl-file-path
+    - java-jdk
+    - gnuplot
+    - canu=2.1.1

@@ -1,0 +1,16 @@
+name: braker2-env
+channels:
+    - conda-forge
+    - bioconda
+    - defaults
+dependencies:
+    - braker2
+    - perl
+    - perl-yaml
+    - perl-hash-merge
+    - perl-logger-simple
+    - perl-parallel-forkmanager
+    - perl-mce
+    - perl-threaded
+    - perl-math-utils
+    - perl-object-insideout

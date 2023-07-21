@@ -1,0 +1,10 @@
+name: scaff10x-env
+channels:
+    - conda-forge
+    - bioconda
+    - defaults
+dependencies:
+    - gcc_linux-64
+    - gxx_linux-64
+    - gcc
+    - git

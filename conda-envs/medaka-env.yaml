@@ -1,0 +1,8 @@
+name: medaka-env
+channels:
+    - bioconda
+    - conda-forge
+    - defaults
+dependencies:
+    - git-lfs
+    - medaka=1.4.4

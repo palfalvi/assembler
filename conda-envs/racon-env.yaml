@@ -1,0 +1,7 @@
+name: racon-env
+channels:
+    - bioconda
+    - conda-forge
+    - defaults
+dependencies:
+    - racon=1.4.13

@@ -1,0 +1,7 @@
+name: raven-env
+channels:
+    - bioconda
+    - conda-forge
+    - defaults
+dependencies:
+    - raven-assembler=1.2.2

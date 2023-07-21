@@ -1,0 +1,1 @@
+minimap2_stringtie2_agat.gff3 lstr  True  3

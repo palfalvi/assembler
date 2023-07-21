@@ -1,0 +1,8 @@
+name: freebayes-env
+channels:
+    - bioconda
+    - conda-forge
+    - defaults
+dependencies:
+    - freebayes
+    - bcftools
