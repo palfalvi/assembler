@@ -15,7 +15,7 @@ workflow purge_dups_wf {
     pd_cov( minimap2.out.map )
 
     // minimap genome vs genome
-    minimap2_genomes( assembly, assembly )
+    minimap2_genomes( assembly )
 
     // purge_dups
     purge_dups( pd_cov.out.base_cov, pd_cov.out.cutoffs, minimap2_genomes.out.map, assembly )

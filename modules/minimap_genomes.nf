@@ -7,14 +7,13 @@ process minimap2_genomes {
   // publishDir "${params.outdir}/gala/preliminary_comparison", mode: 'copy'
 
   input:
-    path genome1
-    path genome2
+    path genome
 
   output:
     path "*.paf", emit: map
 
   script:
     """
-    minimap2 -x asm5 -DP -t ${task.cpus} $genome1 $genome2 > ${genome1.simpleName}vs${genome2.simpleName}.paf
+    minimap2 -x asm5 -DP -t ${task.cpus} $genome $genome > ${genome1.simpleName}vs${genome2.simpleName}.paf
     """
 }
